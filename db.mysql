@@ -1,0 +1,12 @@
+/* Execute these MySQL commands to create a user, database, and table */
+
+-- Create a database user with a password
+create user 'tony'@'localhost' identified by 'thisismypassword';
+grant all privileges on *.* to 'tony'@'localhost';
+flush privileges;
+
+-- Create a database and table
+create database php_demo;
+use php_demo;
+create table demo_table(id int not null auto_increment primary key, name varchar(50) not null, score int);
+
