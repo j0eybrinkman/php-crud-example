@@ -1,8 +1,8 @@
 /* Execute these MySQL commands to create a user, database, and table */
 
 -- Create a database user with a password
-create user 'tony'@'localhost' identified by 'thisismypassword';
-grant all privileges on *.* to 'tony'@'localhost';
+create user 'user'@'localhost' identified by 'password';
+grant all privileges on *.* to 'user'@'localhost';
 flush privileges;
 
 -- Create a database and table
@@ -10,3 +10,7 @@ create database php_demo;
 use php_demo;
 create table demo_table(id int not null auto_increment primary key, name varchar(50) not null, score int);
 
+-- Create table (phpmyadmin)
+CREATE DATABASE `php_demo_og`;
+USE `php_demo`;
+CREATE TABLE `php_demo`.`demo_table` (`id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(50) NOT NULL , `score` INT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
